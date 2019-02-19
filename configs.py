@@ -1,5 +1,5 @@
 botnick = "****"
-passw = "oauth:********************j"
+passw = "oauth:********************"
 channel = "*******"
 owner = "***********"
 print("Configs have loaded succesfully\n")
