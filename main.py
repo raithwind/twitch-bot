@@ -69,6 +69,6 @@ test = Connection("irc.chat.twitch.tv",6667,
 
 test.connect()
 
-
-while True:
-	test.chat_refresh()
+if __name__ == "__main__":
+    while True:
+        test.chat_refresh()
