@@ -1,0 +1,25 @@
+import time
+atime = 4
+class Command:
+        def __init__(self,name,cooldowntime,userlevel):
+            self.name = name
+            self.userlevel = userlevel
+            self.cooldowntime = cooldowntime
+            self.cooldownend = 0
+        def reset_cooldown(self):
+            pass
+        @property
+        def cooldown_end(self):
+            return self.cooldownend
+        @cooldown_end.setter
+        def set_cooldown_end(self):
+            self.cooldownend = time.time() + int(self.cooldowntime)
+            
+        def cooldown(self,atime):
+            if atime < self.cooldown_end:
+                print("timey out")
+
+test = Command("bob","5","1")
+
+test.set_cooldown_end
+print(test.cooldown_end)
